@@ -4,7 +4,9 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>MySQLi</title>
-	<style>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+	<!-- <style>
 		table{
 			border-collapse: collapse;
 			width: 100%;
@@ -14,7 +16,7 @@
 			text-align: left;
 			padding: 8px;
 		}
-	</style>
+	</style> -->
 </head>
 <body>
 	<h1>Conexion a BD - MySQLi</h1>
@@ -36,7 +38,7 @@
 			// echo "Apellidos : ".$persona->apellidos."<br>";
 			// echo "Edad : ".$persona->edad."<br>";
 			$sql = $conexion->query('SELECT * FROM persona'); ?>
-			<table>
+			<table class="table table-striped">
 				<thead>
 					<tr>
 						<th>ID</th>
