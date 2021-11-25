@@ -8,8 +8,8 @@
 	require_once 'conexion.php';
 	if (!empty($_POST['email']) && !empty($_POST['password'])) {
 		$sql = $conn->prepare('SELECT id, email, password FROM users WHERE email = :email');
-		$sql = bindParam(':email', $_POST['email']);
-		$sql->excute();
+		$sql->bindParam(':email', $_POST['email']);
+		$sql->execute();
 		$result = $sql->fetch(PDO::FETCH_ASSOC);
 		$message = "";
 		if (count($result) > 0 && password_verify($_POST['password'], $result['password'])) {
@@ -36,7 +36,7 @@
 		<p><?= $message ?></p>
 	<?php endif; ?>
 	<h1>Login</h1>
-	<span> or <a href="singup.php">SignUP</a></span>
+	<span> or <a href="signup.php">Sign UP</a></span>
 	<form action="login.php" method="POST">
 		<input type="text" name="email" placeholder="Enter your email">
 		<input type="password" name="password" placeholder="Enter your password">

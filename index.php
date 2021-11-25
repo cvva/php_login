@@ -31,7 +31,7 @@
 	<?php else: ?>
 		<h1>Please Login or SignUP</h1>
 		<a href="login.php">Login</a> Or
-		<a href="singup.php">SignUP</a>
+		<a href="signup.php">SignUP</a>
 	<?php endif; ?>
 </body>
 </html>
